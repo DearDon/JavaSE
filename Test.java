@@ -12,17 +12,18 @@ public class Test{
 	//technic to "dynimicly" get a instance of an class.
 	//use a String variable to dynimicly get a instace is to gona work
 	public static void testReflect(){
-		String classtype="ClassA";
+		String classtype="TestSubA";
 		System.out.println(classtype);
-		ClassA A=new ClassA();
+		TestSubA A=new TestSubA();
 		//classtype A=new classtype();
 		A.write();
 	}
 }
-
-class ClassA{
+/*
+class TestSubA{
 	public void write(){
 		System.out.println("test success!");
 	}
 }
+*/
 
