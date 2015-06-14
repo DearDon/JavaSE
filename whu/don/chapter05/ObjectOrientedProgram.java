@@ -2,21 +2,10 @@ package whu.don.chapter05;
 
 //public class ObjectOrientedProgram
 public class ObjectOrientedProgram extends ObjectOrientedProgramSubA
-/*
-    When extends a class,it may lead problem by initiate funciton unmatch
-	because the initiate funciton's behavior be a little odd. unlike other 
-	functions, when in the super class we have a initiate function needed 
-	special parameter and do not have a initiate funciton without parameter. 
-	Then in the sub class we must have a initiate function needed the same
-    kind of parameter.	except for there is a non parameter ini function in 
-	super class.
-	Above all, in case we forget the match the initiate function in sub class
-	we should always have a non parameter ini function in the super class
-	*/
 {
 	ObjectOrientedProgram(int x)
 	{
-		//super();
+		//super(x);
 		//System.out.println("get his");
 	}
 	void test(){System.out.println("test");}
@@ -26,11 +15,11 @@ public class ObjectOrientedProgram extends ObjectOrientedProgramSubA
 		System.out.println(ObjectOrientedProgramSubA.x);
 		System.out.println(ObjectOrientedProgramSubB.y);
 		ObjectOrientedProgramSubB.test();
-		ObjectOrientedProgramSubA a=new ObjectOrientedProgramSubA("sd");
-		ObjectOrientedProgramSubB b=new ObjectOrientedProgramSubB();
+	//	ObjectOrientedProgramSubA a=new ObjectOrientedProgramSubA("sd");
+	//	ObjectOrientedProgramSubB b=new ObjectOrientedProgramSubB();
 		System.gc();//only delete the objects never used again
-		System.out.println("x from a:"+a.x);
-		System.out.println("y from b:"+b.y);
+	//	System.out.println("x from a:"+a.x);
+	//	System.out.println("y from b:"+b.y);
 		new ObjectOrientedProgram(2).test();
 	}
 }
@@ -48,14 +37,17 @@ class ObjectOrientedProgramSubA
 	protected static int x=1;
 	//protected static final int x=1;//this will lead fault as x changed later
 
+	/*
 	ObjectOrientedProgramSubA(String y){}
-	ObjectOrientedProgramSubA(){System.out.println("get his");}
-	/*	
+	*/
+	ObjectOrientedProgramSubA(){
+		System.out.println("get none");
+	}
 	ObjectOrientedProgramSubA(int x)
 	{
 		this.x=x;
+		System.out.println("get int");
 	}
-	*/
 	void test(int x){System.out.println(x);}
 	public static void main(String[] args)
 	{
@@ -90,4 +82,3 @@ class ObjectOrientedProgramSubB
 		//ref[0]=12; this lead problem,as use a null for point of array
 	}
 }
-

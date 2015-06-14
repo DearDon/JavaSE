@@ -51,14 +51,14 @@ public class FlowControl{
 		x=Integer.parseInt(sx);
 		y=Integer.parseInt(sy);
 		switch(x>y?1:x==y?2:3){
-				case 1:System.out.println(sx+">"+sy);
-					   break;
-				case 2:System.out.println(sx+"="+sy);
-					   break;
-				case 3:System.out.println(sx+"<"+sy);
-					   break;
-				default:System.out.println("input parameters"+ sx+"and"+sy+"are not propal");
-						break;
+			case 1:System.out.println(sx+">"+sy);
+				   break;
+			case 2:System.out.println(sx+"="+sy);
+				   break;
+			case 3:System.out.println(sx+"<"+sy);
+				   break;
+			default:System.out.println("input parameters"+ sx+"and"+sy+"are not propal");
+					break;
 		}
 		/* old method
 		if(x>y)
